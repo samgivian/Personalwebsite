@@ -1,0 +1,299 @@
+body {
+  background-color: #FFFFFF;
+}
+
+/* Navbar */
+
+.aa-nav {
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  overflow: hidden;
+  font-size: 0;
+  /*background: rgba(255, 255, 255, .9);
+box-shadow: 0px 1px 8px rgba(0, 0, 0, .15);*/
+  padding-left: 40px;
+  padding-right: 40px;
+  transition: 0.2s linear all;
+  z-index: 9998;
+}
+
+.aa-small-nav {
+  height: 65px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Nav items */
+
+.aa-nav-items {
+  float: right;
+  margin-right: 20%;
+  color: black;
+  line-height: 90px;
+  list-style: none;
+  transition: 0.2s linear all;
+}
+
+.aa-small-nav-items {
+  line-height: 65px;
+}
+
+.aa-nav-items>span {
+  border-style: none;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.aa-nav-item>a {
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  transition: 0.2s linear all;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.aa-nav-item>a:hover {
+  color: #3e78b2 !important;
+}
+
+.black {
+  color: black;
+}
+
+.white {
+  color: white;
+}
+
+/* ./Nav items */
+
+/* Hamburger */
+
+.aa-icon-bar {
+  background-color: #474747;
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  margin-bottom: 4px;
+  transition: opacity, transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.7, 0, 0, 0.7);
+}
+
+.aa-hamburger-menu {
+  cursor: pointer;
+  position: fixed;
+  top: 38px;
+  right: 40px;
+  z-index: 9998;
+  display: none;
+  transition: 0.2s linear all;
+}
+
+.aa-small-hamburger-menu {
+  top: 25.5px;
+}
+
+.aa-hamburger-menu:hover>.aa-icon-bar {
+  background-color: #ff707a;
+}
+
+.aa-hamburger-menu:not(.collapsed) .aa-icon-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.aa-hamburger-menu:not(.collapsed) .aa-icon-bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.aa-hamburger-menu:not(.collapsed) .aa-icon-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ./Hamburger */
+
+/* Mobile Overlay */
+
+.aa-mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(72, 133, 187, 0.8);
+  overflow: auto;
+  z-index: 9997;
+  display: none;
+}
+
+.aa-mobile-nav-items {
+  padding: 0;
+  margin: 65px 0px;
+  text-align: center;
+  list-style: none;
+}
+
+.aa-mobile-nav-items>li {
+  display: block;
+  padding-top: 30px;
+}
+
+.aa-mobile-nav-items>li>a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+}
+
+.aa-mobile-nav-items>li>a:hover {
+  color: #ff7070;
+}
+
+/* ./Mobile Overlay */
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+  .aa-hamburger-menu {
+    display: block;
+  }
+  .aa-nav-items {
+    display: none;
+  }
+}
+
+/*side Icon */
+
+.icon-bar {
+  position: fixed;
+  display: none;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  border-radius: 100px;
+  font-size: 1.25em;
+  margin: 15px;
+}
+
+.facebook {
+  background-color: transparent;
+  color: black;
+}
+
+.facebook:hover {
+  transform: scale(1.33);
+}
+
+.github {
+  background-color: transparent;
+  color: black;
+}
+
+.github:hover {
+  transform: scale(1.33);
+}
+
+.linkedin {
+  background-color: transparent;
+  color: black;
+}
+
+.linkedin:hover {
+  transform: scale(1.33);
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("wallpaper.jpg");
+  filter: opacity(35%);
+  /* Set a specific height */
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.typewriter {
+  color: #6271bc;
+}
+
+.typewriter::after {
+  content: "|";
+  display: inline;
+  animation: blink 1s infinite;
+}
+
+/* custom cursor animation */
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.scroll-indicator {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: bounce 1s infinite;
+  animation: bounce 1s infinite;
+  padding-top: 87.5vh;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    top: 10px;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 10px;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+  background-color: rgba(212, 212, 212, 0.25);
+  padding: 30px;
+}
