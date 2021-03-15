@@ -1,69 +1,43 @@
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #FFFFFF;
-}
-
-.loader {
-  max-width: 15rem;
+html,
+body {
   width: 100%;
-  height: auto;
-  stroke-linecap: round;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-circle {
-  fill: none;
-  stroke-width: 3.5;
-  -webkit-animation-name: preloader;
-          animation-name: preloader;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  transform-origin: 170px 170px;
-  will-change: transform;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(62, 120, 178);
+  justify-content: center;
 }
-circle:nth-of-type(1) {
-  stroke-dasharray: 550px;
+.loader {
+  color: #fff;
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: 30vh;
+  opacity: 0.8;
+  margin:auto;
 }
-circle:nth-of-type(2) {
-  stroke-dasharray: 500px;
+.loader span {
+  display: inline-block;
+  -webkit-animation: pulse 0.4s alternate infinite ease-in-out;
+          animation: pulse 0.4s alternate infinite ease-in-out;
 }
-circle:nth-of-type(3) {
-  stroke-dasharray: 450px;
+.loader span:nth-child(odd) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
-circle:nth-of-type(4) {
-  stroke-dasharray: 300px;
-}
-circle:nth-of-type(1) {
-  -webkit-animation-delay: -0.15s;
-          animation-delay: -0.15s;
-}
-circle:nth-of-type(2) {
-  -webkit-animation-delay: -0.3s;
-          animation-delay: -0.3s;
-}
-circle:nth-of-type(3) {
-  -webkit-animation-delay: -0.45s;
-          animation-delay: -0.45s;
-}
-circle:nth-of-type(4) {
-  -webkit-animation-delay: -0.6s;
-          animation-delay: -0.6s;
-}
-
-@-webkit-keyframes preloader {
-  50% {
-    transform: rotate(360deg);
+@-webkit-keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
   }
 }
-
-@keyframes preloader {
-  50% {
-    transform: rotate(360deg);
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
   }
 }

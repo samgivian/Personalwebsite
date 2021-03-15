@@ -101,7 +101,7 @@ box-shadow: 0px 1px 8px rgba(0, 0, 0, .15);*/
 }
 
 .aa-hamburger-menu:hover>.aa-icon-bar {
-  background-color: #ff707a;
+  background-color:  black;
 }
 
 .aa-hamburger-menu:not(.collapsed) .aa-icon-bar:nth-child(1) {
@@ -127,7 +127,7 @@ box-shadow: 0px 1px 8px rgba(0, 0, 0, .15);*/
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(72, 133, 187, 0.8);
+  background:  rgb(5, 99, 187);
   overflow: auto;
   z-index: 9997;
   display: none;
@@ -230,7 +230,7 @@ box-shadow: 0px 1px 8px rgba(0, 0, 0, .15);*/
 }
 
 .typewriter {
-  color: #6271bc;
+  color:  #3e78b2;
 }
 
 .typewriter::after {
@@ -252,7 +252,6 @@ box-shadow: 0px 1px 8px rgba(0, 0, 0, .15);*/
     opacity: 1;
   }
 }
-
 
 .scroll-indicator {
   font-size: 30px;
@@ -288,6 +287,65 @@ box-shadow: 0px 1px 8px rgba(0, 0, 0, .15);*/
   }
 }
 
+.btn-resume {
+  padding: 1.1em 18vh;
+  border: 3px solid  #3e78b2;
+  background-color: transparent;
+  border-radius: 1.5vh;
+  color: #3e78b2;
+  font-weight: 500;
+  transition: 0.75s;
+  margin-top: 20px;
+}
+
+.btn-resume:hover {
+  background-color:  #3e78b2;;
+  color: white;
+  box-shadow: 4px 4px rgb(204, 204, 204), 4px 4px rgb(204, 204, 204);
+}
+
+.h-about {
+  display: none;
+}
+
+.h-about-animation {
+  display: block;
+  animation: hideMe 2s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideMe {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.h-about-p {
+  display: none;
+}
+
+.h-about-animation-p {
+  display: block;
+  animation: hideMe-p 1s 1;
+  position: relative;
+}
+@keyframes hideMe-p {
+  from {
+    margin-top: 15vh;
+  }
+  to {
+    margin-top: 0vh;
+  }
+}
 .footer {
   left: 0;
   bottom: 0;
@@ -296,4 +354,34 @@ box-shadow: 0px 1px 8px rgba(0, 0, 0, .15);*/
   text-align: center;
   background-color: rgba(212, 212, 212, 0.25);
   padding: 30px;
+  margin-top: 50px;
+}
+.footer_name{
+  font-weight: bold;
+}
+.social_circle_footer{
+  background: #3e78b2;
+  width: 50px;
+  height:50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 15px;
+ 
+}
+.social_circle_footer:hover{
+  background-color:rgba(62, 120, 178	,0.875  )
+}
+.footer-social {
+  color:white;
+  font-size: 24px;
+  text-align: center;
+}
+.footer-social:hover{
+
+  color:white;
+  text-decoration:none;
+  background-color:
 }
